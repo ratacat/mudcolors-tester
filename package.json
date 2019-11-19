@@ -1,0 +1,16 @@
+{
+  "name": "mudcolors-tester",
+  "version": "1.0.0",
+  "description": "tests out color codes for mudcolors parsing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Itchy",
+  "dependencies": {
+	"mudcolors": "^1.0.9",
+	"nodemon": "^1.19.1",
+	"wrap-ansi": "^4.0.0"
+  },
+  "license": "ISC"
+}
