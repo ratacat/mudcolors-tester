@@ -16,7 +16,7 @@ let wrap = require("wrap-ansi")
 /**
  * this array lets you add any number of strings of text
  * and each are parsed to the terminal with color on save
- * when using nodemon
+ * when using nodemon. I left some strings in there as an example. NOTE* This whole file must be properly formatted javascript or nothing will work. Remove a comma or quote from below and it all breaks =)
  */
 let ar = [
 	"B]A w]shalloW]w cw]rater B]is littered broken rock.",
@@ -38,10 +38,18 @@ let ar = [
 
 let styles = "r]cR]oY]lG]org]fY]ul R]hawB]tw]hW]orne M]rom]seM]wood"
 
-let tags = "w]white W]White y]yellow Y]Yellow g]green G]Green c]cyan C]Cyan m]magenta M]Magenta u]blue U]Blue B]Black r]red R]Red"
-let demo = "w]white   W]White   y]yellow   Y]Yellow   g]green   G]Green   c]cyan   C]Cyan   m]magenta   M]Magenta   u]blue   U]Blue   B]Black   r]red   R]Red"
-let div = "C]-------------------------------------------------------"
+/**
+ * Each color code uses a single letter followed by a right bracket. -> ]
+ * 
+ * Capitals are generally the brighter version. Each color has a regular and a bright, except black at the moment, has just the bright. These 15 colors are what almost all muds of yore used, and they can be woven together in all kinds of ways. 
+ * 
+ * Because Enceladus is accessed in a web browser, we have the ability to add new colors. I haven't done this yet, but the possibility is there.
+ */
 
+let demo = "w]white   W]White   y]yellow   Y]Yellow   g]green   G]Green   c]cyan   C]Cyan   m]magenta   M]Magenta   u]blue   U]Blue   B]Black   r]red   R]Red"
+let tags = "w]%sW]%sy]%sY]%sg]%sG]%sc]%sC]%sm]%sM]%su]%sU]%sB]%sr]%sR]"
+let div = "C]-------------------------------------------------------"
+ 
 for (let e of ar){
 	console.log(ansi.parse(e))
 }
@@ -49,6 +57,6 @@ for (let e of ar){
 console.log("")
 console.log(wrap(ansi.parse(styles)))
 console.log(ansi.parse(div))
-console.log(wrap(demo, 80))
-console.log(wrap(ansi.parse(demo), 80))
+console.log(wrap(ansi.parse(demo), 90))
+console.log(wrap(tags, 90), Array(5).join(" "), Array(5).join(" "), Array(6).join(" "), Array(6).join(" "), Array(5).join(" "), Array(5).join(" "), Array(4).join(" "), Array(4).join(" "), Array(7).join(" "), Array(7).join(" "), Array(4).join(" "), Array(4).join(" "), Array(5).join(" "), Array(3).join(" "))
 console.log(ansi.parse(div))

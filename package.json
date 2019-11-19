@@ -8,9 +8,9 @@
   },
   "author": "Itchy",
   "dependencies": {
-	"mudcolors": "^1.0.9",
-	"nodemon": "^1.19.1",
-	"wrap-ansi": "^4.0.0"
+    "mudcolors": "^1.0.9",
+    "nodemon": "^1.19.1",
+    "wrap-ansi": "^4.0.0"
   },
   "license": "ISC"
 }
